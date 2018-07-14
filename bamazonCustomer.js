@@ -68,7 +68,7 @@ function start() {
             } 
         // Once the customer has placed the order, your application should check if your store has enough of the product to meet the customer's request.
             // if your store _does_ have enough of the product, you should fulfill the customer's order.
-            if (parseInt(chosenItem.stock_quantity) > parseInt(answer.unit)) {
+            if (chosenItem.stock_quantity > parseInt(answer.unit)) {
                 // console.log(true)
                 // updating the SQL database to reflect the remaining quantity.
                 connection.query("UPDATE products SET ? WHERE ?", [{
